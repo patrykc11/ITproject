@@ -1,0 +1,19 @@
+body
+{
+    background-image: url('images/background.jpg');
+    background-attachment: fixed;
+    /*background-repeat: repeat-x;
+    background-color: #64646c;*/
+}
+p a 
+{
+    color: yellow;
+}
+p 
+{
+    color: yellow;
+}
+p.definicja 
+{
+    color: green;
+}
