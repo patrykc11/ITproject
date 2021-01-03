@@ -13,6 +13,9 @@
       	
       <link href="gosc.css" rel="stylesheet" type="text/css"> 
       <link rel="shortcut icon" href="images/icon.png">
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+      <script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
         <div align="center">
@@ -69,9 +72,9 @@
 
                         </li>
                         <li><span class="odstep">        </span></li>   
-                        <li><a href="#"><span class="link">Przepisy</span></a></li>
+                        <li id="ABC"><a href="gif.html"><span class="link">Przepisy</span></a></li>
                         <li><span class="odstep">        </span></li>   
-                        <li><a href="historia.php"><span class="link">Historia</span></a></li>
+                        <li id="hist"><a href="temp.php"><span class="link">Historia</span></a></li>
                         <li><span class="odstep">        </span></li>   
                         <li><a href="#"><span class="link">Kursy</span></a>
 
@@ -99,6 +102,5 @@
                 </div>
             </div>
         </div>
-
     </body>
 </html>

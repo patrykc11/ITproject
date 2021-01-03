@@ -12,13 +12,21 @@
       <meta name="keywords" content="waterpolo, piłka wodna, piłka wodna mecze, piłka wodna w polsce" />
       	
       <link href="styles.css" rel="stylesheet" type="text/css"> 
-	  <link rel="shortcut icon" href="images/igrzyska.jpg">
+	  <link rel="shortcut icon" href="images/icon.png">
 	</head>
 	<body>
-		<p><a href="logowanie.php">Piłka wodna</a></p>
-		<p><a href="#">Piłka nożna</a></p>
-		<p><a href="#">Piłka siatkowa</a></p>
-		<p><a href="#">Koszykówka</a></p>
-
+		<div id="panel">
+		<form>
+		<label for="username">Nazwa użytkownika:</label>
+			<input type="text" id="username" name="username">
+		<label for="password">Hasło:</label>
+			<input type="password" id="password" name="password">
+		<div id="lower">
+			<input type="checkbox"><label class="check" for="checkbox">Zapamiętaj mnie!</label>
+			<input type="submit" value="Login">
+		</div>
+		</form>
+		</div>
+		<p><a href="gosc.php">Nie posiadam konta, chcę wejść jako gość</a></p>
 	</body>
 </html>
