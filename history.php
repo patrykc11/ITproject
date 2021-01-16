@@ -1,4 +1,4 @@
-<div id="tekst">
+<div id="text">
     <p><h1>Historia piłki wodnej</h1></p>
     Piłka wodna, jako dyscyplina sportu powstała pod koniec XIX wieku w 
     Wielkiej Brytanii. Za jej protoplastów uważają się Szkoci. Pierwsze 
@@ -31,13 +31,9 @@
     UKS Kajman Zgierz, KS CKS Orka Szczecin, UKS Pałac Młodzieży Warszawa, WUKPW Octopus Warszawa, 
     UKS Niska Warszawa, Amicus Aque Police, UKS Batory 12, Legia Warszawa, KS Alfa Gorzów Wielkopolski, 
     AZS Uniwersytet Warszawski, AZS Water Polo Lublin.
-    <?php
-echo $zmienna;
-        
-?>
 </div>
 <style>
-#tekst
+#text
 {
     text-align: justify;
     padding: 10px 50px;

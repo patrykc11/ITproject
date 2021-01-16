@@ -16,10 +16,10 @@
 	</head>
 	<body>
 		<div align="center">
-            <div id="kontener">
-				<p id="tytul"><h1>Strona w budowie</h1></p>
-				<p id="tytul2"><h2>Wybierz inny sport</h2></p>
-                <img src="images/stronawbudowie.jpg" alt="Strona w budowie" />
+            <div id="container">
+				<p id="title"><h1>Strona w budowie</h1></p>
+				<p id="title2"><h2>Wybierz inny sport</h2></p>
+                <img src="images/stronaWbudowie.jpg" alt="Strona w budowie" />
 			</div>
 		</div>
 	</body>

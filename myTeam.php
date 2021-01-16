@@ -1,19 +1,18 @@
 <div id="text">
-    <div id="teamHeader">
-        <h1><a href="https://www.waterpolo.bytom.pl/">
-        <img id="wtsLogo" src="images/WTSlogo.jpg" alt="WTS logo" /></a>Łukosz WTS Polonia Bytom</h1>
+    <div id="myTeamHeader">
+        <h1>Moja Drużyna</h1>
     </div>
 
-    <div id="teamMenu">
-        <div id="aboutTeam"><a href="#">O klubie</a></div>
-        <div id="Match"><a href="#">Mecze</a></div>
-        <div id="Players"><a href="#">Skład</a></div>
-        <div id="Statistics"><a href="#">Statystyki</a></div>
+    <div id="myTeamMenu">
+        <div id="players"><a href="#">Zawodnicy</a></div>
+        <div id="trenings"><a href="#">Treningi</a></div>
+        <div id="upcoming_events"><a href="#">Nadchodzące wydarzenia</a></div>
+        <div id="files"><a href="#">Pliki do pobrania</a></div>
     </div>
 </div>
 
 <style>
-#teamHeader
+#myTeamHeader
 {
     
     width:990px;
@@ -45,11 +44,11 @@ h1
     font-family: Calibri, Tahoma, Arial;
     font-style: italic;
 }
-#teamMenu 
+#myTeamMenu 
 {
     padding-top: 20px;
 }
-#teamMenu a
+#myTeamMenu a
 {
     border-bottom: none;
     color: #515151;
@@ -59,11 +58,11 @@ h1
     font-style: italic; 
 }
 
-#teamMenu a:hover
+#myTeamMenu a:hover
 {
     color: black;
 }
-#teamMenu:after 
+#myTeamMenu:after 
 {
         content:'';
         display:block;
@@ -71,7 +70,7 @@ h1
 }
 
 
-#aboutTeam
+#players
 {
         float:left;
         width:100px;
@@ -80,26 +79,26 @@ h1
         border-radius: 10px;
 }
 
-#Match
+#trenings
 {
         float:left;
-        width:100px;
+        width:200px;
         height: 20px;
         border-radius: 10px;
         
 }
-#Players
+#upcoming_events
 {
         float:left;
-        width:100px;
+        width:200px;
         height: 20px;
         border-radius: 10px;
         
 }
-#Statistics
+#files
 {
         float:left;
-        width:100px;
+        width:200px;
         height: 20px;
         border-radius: 10px;
         

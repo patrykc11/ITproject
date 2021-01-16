@@ -1,5 +1,6 @@
 <?php
-    session_start();
+	session_start();
+	unset($_SESSION['error']);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -24,7 +25,7 @@
 				<p id="tytul2"><h2>Proszę wybrać sport, który Cię interesuje:</h2></p>
 				
 				<div class="sporty">
-					<a href="logowanie.php">
+					<a href="loginPage.php">
 						<div class = "button">
 							<p>Piłka wodna</p>
 							<img class="logo" src="images/logo_gorne.png" alt="Piłka wodna logo" />
@@ -33,7 +34,7 @@
 				</div>	
 
 				<div class="sporty">
-					<a href="praceTechniczne.php">
+					<a href="technicalWork.php">
 						<div class = "button">
 							<p>Piłka nożna</p>
 							<img class="logo" src="images/800px-Football_pictogram.svg.png" alt="Piłka nożna logo" />
@@ -42,7 +43,7 @@
 				</div>
 
 				<div class="sporty">
-					<a href="praceTechniczne.php">
+					<a href="technicalWork.php">
 						<div class = "button">
 							<p>Siatkówka</p>
 							<img class="logo" src="images/800px-Volleyball_(indoor)_pictogram.svg.png" alt="Siatkówka logo" />
@@ -51,7 +52,7 @@
 				</div>
 
 				<div class="sporty">
-					<a href="praceTechniczne.php">
+					<a href="technicalWork.php">
 						<div class = "button">
 							<p>Koszykówka</p>
 							<img class="logo" src="images/800px-Basketball_pictogram.svg.png" alt="Koszykówka logo" />

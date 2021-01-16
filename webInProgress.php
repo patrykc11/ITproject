@@ -1,5 +1,5 @@
-<p id="tytul"><h1>Strona w budowie</h1></p>
-<img src="images/stronawbudowie.jpg" alt="Strona w budowie" />
+<p id="title"><h1>Strona w budowie</h1></p>
+<img src="images/webInProgress.jpg" alt="Strona w budowie" />
 
 <style>
 h1
