@@ -1,4 +1,4 @@
-<div>
+
     <p><h1>Mój profil</h1></p>
     <?php
         if(isset($_SESSION['logged']) && $_SESSION['logged']==true)
@@ -23,10 +23,28 @@
                                 $_SESSION['surname'] = $row['Nazwisko'];
                                 $_SESSION['age'] = $row['Rocznik'];
                                 $_SESSION['position'] = $row['Pozycja'];
+                                $_SESSION['number'] = $row['NumerCzepka'];
+                                $_SESSION['club'] = $row['Klub'];
+                                $_SESSION['weight'] = $row['Waga'];
+                                $_SESSION['height'] = $row['Wzrost'];
+                                $_SESSION['goals'] = $row['ZdobyteBramki'];
     
                                 unset($_SESSION['error']);
                                 $result->free();
 
+                                echo  
+                                    "<center><table id=\"tab\">
+                                        <tr><td class=\"left\">Imię:  </td><td class=\"middle\">{$_SESSION['name']}</td></tr>
+                                        <tr><td class=\"left\">Nazwisko: </td><td class=\"middle\">{$_SESSION['surname']}</td></tr>
+                                        <tr><td class=\"left\">Rocznik:  </td><td class=\"middle\">{$_SESSION['age']}</td></tr>
+                                        <tr><td class=\"left\">Klub:   </td><td class=\"middle\">{$_SESSION['club']}</td></tr>
+                                        <tr><td class=\"left\">Pozycja:  </td><td class=\"middle\">{$_SESSION['position']}</td></tr>
+                                        <tr><td class=\"left\">Numer czepka:   </td><td class=\"middle\">{$_SESSION['number']}</td></tr>
+                                        <tr><td class=\"left\">Waga:   </td><td class=\"middle\">{$_SESSION['weight']} kg</td></tr>
+                                        <tr><td class=\"left\">Wzrost:  </td><td class=\"middle\">{$_SESSION['height']} cm</td></tr>
+                                        <tr><td class=\"left\">Zdobyte bramki:  </td><td class=\"middle\">{$_SESSION['goals']}</td></tr>
+                                    </table></center>
+                                    ";
                         }else
                             echo "błędne zapytanie";
                     
@@ -35,22 +53,44 @@
                 $connection->close();
             }
         }
-        echo $_SESSION['age'];;
-        echo  $_SESSION['position'];
     ?>
 
 
 
-</div>
+
 <style>
-#text
+#tab 
 {
-    text-align: justify;
-    padding: 10px 50px;
-    row-height: 140%;
-    font-size: 14px;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+    width: 800px; 
+    height:400px;
+    border-collapse: collapse;
 }
+
+.middle
+{
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 17px;
+    border: 1px solid black;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+.left
+{
+
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 400px;
+}
+
 
 h1
 {

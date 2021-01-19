@@ -1,7 +1,10 @@
-<div id="tekst">
+<div id="text">
     <p><h1>Zasady gry w piłkę wodną</h1></p>
 
-
+<?php
+$haslo = password_hash('waterpolo',PASSWORD_DEFAULT);
+    echo $haslo;
+?>
 </div>
 <style>
 #tekst

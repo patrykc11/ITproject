@@ -45,7 +45,7 @@
                                 $role = "trener";
                            echo 
                               "<table>
-                                <tr><td>Nazwa użytkownika: {$_SESSION['user']}</td></tr>
+                                <tr><td>Zalogowany jako: {$_SESSION['user']}</td></tr>
                                 <tr><td>Rola w zespole: {$role}</td></tr>
                                 <tr><td><a href='?page=myProfile'>Mój profil</a></td></tr>
                                 <tr><td><a href='logout.php'>Wyloguj</a></td></tr>
@@ -69,7 +69,7 @@
                         
                             <ul class="second_level">
                                 <li class="first_element"><div id="polish_news"><a href="?page=polish_news">Polska</a></div></li>
-                                <li><a href="http://www.fina.org/discipline/water-polo">Świat</a></li>
+                                <li><a href="http://www.fina.org/discipline/water-polo" target="_blank">Świat</a></li>
                             </ul>
 
                         </li>  
@@ -77,10 +77,10 @@
                         <li><a href="#"><span class="link">Rozgrywki</span></a>
                         
                             <ul class="second_level">
-                                <li class="first_element"><a href="#">Tabela</a></li>
-                                <li><a href="#">Spotkania</a></li>
-                                <li><a href="#">Liga Mistrzów</a></li>
-                                <li><a href="#">Symulator sezonu</a></li>
+                                <li class="first_element"><a href="?page=table">Tabela</a></li>
+                                <li><a href="?page=matches">Spotkania</a></li>
+                                <li><a href="https://www.flashscore.com/water-polo/europe/champions-league/" target="_blank">Liga Mistrzów</a></li>
+                                <li><a href="?page=simulator">Symulator sezonu</a></li>
                             </ul>
 
                         </li> 
@@ -127,8 +127,8 @@
 
                                 if(isset($_GET['page']))
                                 {
-                                    $allowed_pages = array("PoloniaBytom","polish_news","webInProgress","history","rules","startPage");
-                                    $limited_pages = array("PoloniaBytom","myProfile","rules","startPage", "myTeam");
+                                    $allowed_pages = array("PoloniaBytom","polish_news","webInProgress","history","rules","startPage","table","matches");
+                                    $limited_pages = array("PoloniaBytom","myProfile","rules","startPage", "myTeam","table","matches","simulator");
 
                                     $page = filter_var($_GET['page'], FILTER_SANITIZE_STRING);           
 
@@ -164,6 +164,7 @@
                     </div>
                     <div id="lower_part_of_content"></div>
                 </div>
+                <div id="lower_part_of_page">Designed and created by Patryk Cebo and Mateusz Grzegorczyk</div>
             </div>
         </div>
     </body>

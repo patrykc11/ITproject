@@ -6,7 +6,7 @@
 
 body
 {
-    background-image: url('images/tlo_logowanie.jpg');
+    background-image: url('images/ltblue_grad.png');
     background-attachment: fixed;
     /*background-repeat: repeat-x;
     background-color: #64646c;*/
@@ -25,7 +25,7 @@ body
     margin-top: 10px;
     width:1000px;
     height: 140px;
-    background-image: url('images/menu_background.jpg');
+    background-image: url('images/tlo_light2up.jpg');
 }
 
 img.logo
@@ -71,7 +71,7 @@ a
 
 #middle_menu
 {
-    background-image: url('images/menu_background.jpg');
+    background-image: url('images/tlo_light2down.jpg');
     width: 1000px;
     height: 32px;
     border-radius: 0px 0px 20px 20px;
@@ -86,7 +86,7 @@ a
 #middle_menu li a
 {
     border-bottom: none;
-    color: #515151;
+    color: black;
     font-size: 15px;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: bold;
@@ -113,7 +113,7 @@ a
 
 #middle_menu li a:hover
 {
-    color: black;
+    color:  #515151;
 }
 
 #first_level li .second_level
@@ -195,7 +195,7 @@ a
 
 #lower_part_of_content
 {
-    background-image: url('images/dolna_czesc_zawartosci_Easy-Resize.com.jpg');
+    background-color: url('images/dolna_czesc_zawartosci_Easy-Resize.com.jpg');
     width: 1000px;
     height: 31px;
 }
@@ -205,4 +205,10 @@ a
     background-image: url('images/srodkowa_czesc_zawartosci_Easy-Resize.com.jpg');
     width: 1000px;
     background-repeat: repeat-y;
+}
+
+#lower_part_of_page
+{
+    width: 1000px;
+    height: 31px;
 }
