@@ -32,6 +32,16 @@
                                 }
                                 $result->free();
                                 echo  "</table></center>";
+
+                                if(isset($_SESSION['status']) && $_SESSION['status']==2)
+                                {
+                                    echo "
+                                    <a class=\"button\" href='addPlayerForm.php' target=\"_blank\">
+                                    
+                                        Dodaj zawodnika
+                                    
+                                    </a>";
+                                }
                         }else
                             echo "błędne zapytanie";
     
@@ -98,5 +108,35 @@
     margin-bottom: 22px;
     font-family: Calibri, Tahoma, Arial;
     font-style: italic;
+}
+
+.button{
+ display: inline-block;
+ border:1px solid #696969;
+ color: black;
+ border-radius: 3px 3px 3px 3px;
+ /*-webkit-border-radius: 3px 3px 3px 3px;
+ -moz-border-radius: 3px 3px 3px 3px;*/
+ font-family: Verdana;
+ width: auto;
+ height: auto;
+ font-size: 13px;
+ padding: 4px 21px;
+ margin-bottom: 10px;
+ margin-top: 10px;
+ /*box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d,0 2px 4px 0 #D4D4D4;
+ -moz-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d,0 2px 4px 0 #D4D4D4;
+ -webkit-box-shadow: inset 0 1px 0 0 #fff6ce,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d,0 2px 4px 0 #D4D4D4;
+ text-shadow: 0 1px 0 #fff;*/
+ background-image: linear-gradient(to top, #C0C0C0, #C0C0C0);
+ background-color: #C0C0C0;
+}
+.button:hover, .button:active{
+ border:1px solid #696969;
+ color: black;
+ box-shadow: inset 0 1px 0 0 #696969,inset 0 -1px 0 0 #696969,inset 0 0 0 1px #696969;
+ -moz-box-shadow: inset 0 1px 0 0 #696969,inset 0 -1px 0 0 #696969,inset 0 0 0 1px #696969;
+ -webkit-box-shadow: inset 0 1px 0 0 #696969,inset 0 -1px 0 0 #696969,inset 0 0 0 1px #696969;
+ background-color:#C0C0C0;
 }
 </style>

@@ -2,7 +2,7 @@
     <p><h1>Zasady gry w piłkę wodną</h1></p>
 
 <?php
-$haslo = password_hash('waterpolo',PASSWORD_DEFAULT);
+$haslo = password_hash('trener',PASSWORD_DEFAULT);
     echo $haslo;
 ?>
 </div>

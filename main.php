@@ -88,7 +88,7 @@
                         <li><a href="#"><span class="link">Zespoły</span></a>
 
                             <ul class="second_level">
-                                <li class="first_element"><div id="PoloniaBytom"><a href="?page=PoloniaBytom">Łukosz WTS Polonia Bytom</a></div></li>
+                                <li class="first_element"><div id="PoloniaBytom"><a href="?page=PoloniaBytom&page2=aboutBytom">Łukosz WTS Polonia Bytom</a></div></li>
                                 <li><a href="?page=webInProgress">AZS Uniwersytet Warszawa</a></li>
                                 <li><a href="?page=webInProgress">Box Logistics Waterpolo Poznań</a></li>
                                 <li><a href="?page=webInProgress">ŁSTW OCMER Łódź</a></li>
@@ -105,7 +105,7 @@
                         <li><span class="space">        </span></li>   
                         <li id="hist"><a href="?page=history"><span class="link">Historia</span></a></li>
                         <li><span class="space">        </span></li>
-                        <li id="hist"><a href="?page=myTeam"><span class="link">Moja drużyna</span></a></li>
+                        <li id="hist"><a href="?page=myTeam&page1=myPlayers"><span class="link">Moja drużyna</span></a></li>
                         <li><span class="space">        </span></li>    
                         <li><a href="#"><span class="link">Kursy</span></a>
 
