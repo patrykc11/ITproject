@@ -1,0 +1,11 @@
+INSERT INTO `zespoly`(`ID`, `Nazwa`, `Miejscowosc`, `DataZalozenia`, `Punkty`, `RozegraneMecze`, `IloscMistrzostw`, `Zwyciestwa`, `Porazki`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9])
+INSERT INTO `zawodnicy`(`ID`, `Imie`, `Nazwisko`, `Klub`, `Pozycja`, `NumerCzepka`, `Rocznik`, `Waga`, `Wzrost`, `ZdobyteBramki`, `Wykluczenia`, `WykluczeniaBezPrawa`, `IloscRozegranychSpotkan`, `IDuzytkownika`, `Email`) VALUES (14,"Krzysztof","Paczyna","WTS Polonia Bytom","Trener",0,1973,90,176,0,0,0,0,0,"kpaczyna@gmail.com");
+
+
+
+
+
+
+INSERT INTO `mecze`(`ID`, `Gospodarz`, `Gosc`, `DataMeczu`, `Sedziowie`, `Delegat`, `Wynik`, `Zwyciezca`, `Stat`) VALUES (1,"Box Logistics Waterpolo Poznań","UKS NEPTUN Uniwersytet Łódzki","10.10.2020","Mario Bernus i Łukasz Czapliński","Łukasz Król","19:8","Box Logistics Waterpolo Poznań",1);
+INSERT INTO `mecze`(`ID`, `Gospodarz`, `Gosc`, `DataMeczu`, `Sedziowie`, `Delegat`, `Wynik`, `Zwyciezca`, `Stat`) VALUES (2,"KSZO Ostrowiec Św.","ŁSTW Politechnika Łódzka","10.10.2020","Radosław Koryzna i Sebastian Sitek","Piotr Krysztofiak","19:7","KSZO Ostrowiec Św.",1);
+INSERT INTO `mecze`(`ID`, `Gospodarz`, `Gosc`, `DataMeczu`, `Sedziowie`, `Delegat`, `Wynik`, `Zwyciezca`, `Stat`) VALUES (3,"ŁSTW OCMER Łódź","ŁUKOSZ WTS Polonia Bytom","14.03.2021","Mario Bernus i Sebastian Paczkowski","Dominik Sznajder","","",0);

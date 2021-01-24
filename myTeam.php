@@ -5,16 +5,16 @@
 
     <div id="myTeamMenu">
         <div id="players"><a href="?page=myTeam&page1=myPlayers">Zawodnicy</a></div>
-        <div id="trenings"><a href="#">Treningi</a></div>
-        <div id="upcoming_events"><a href="#">Nadchodzące wydarzenia</a></div>
-        <div id="files"><a href="#">Pliki do pobrania</a></div>
+        <div id="trenings"><a href="?page=myTeam&page1=myTrainings">Treningi</a></div>
+        <div id="upcoming_events"><a href="?page=myTeam&page1=myEvents">Nadchodzące wydarzenia</a></div>
+        <div id="files"><a href="?page=myTeam&page1=myFiles">Pliki do pobrania</a></div>
     </div>
     <div id="subpageContent">
         <?php
 
             if(isset($_GET['page1']))
             {
-                $limited_pages1 = array("myPlayers");
+                $limited_pages1 = array("myPlayers","myEvents","myFiles","myTrainings");
 
                 $page1 = filter_var($_GET['page1'], FILTER_SANITIZE_STRING);           
 

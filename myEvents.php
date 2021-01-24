@@ -1,9 +1,9 @@
 
     <?php
- 
+     
     echo "<center><table id=\"tab\">
-    <tr><td class = \"head\">Imie</td><td class = \"head\">Nazwisko</td><td class = \"head\">Pozycja</td><td class = \"head\">Numer czepka</td><td class = \"head\">Zdobyte Bramki</td><td class = \"head\">Email</td></tr>";
- 
+    <tr><td class = \"head\">Data</td><td class = \"head\">Nazwa</td><td class = \"headInf\">Szczegóły</td><td class = \"head\"></td></tr>";
+    $j = 0;
             require_once "DataBase.php";
 
             $connection = @new mysqli($host, $db_user, $db_password, $db_name);
@@ -16,49 +16,35 @@
             {
                 if(isset($_SESSION['logged']) && $_SESSION['logged'] == true && ($_SESSION['status']==2 || $_SESSION['status']==1))
                 {
-                $userid = $_SESSION['userID'];
-                $sql = "SELECT * FROM zawodnicy WHERE IDuzytkownika='$userid'";
-    
-                        if($result = @$connection->query($sql))
-                        {
-                                $row = $result->fetch_assoc();
-                                $_SESSION['club'] = $row['Klub']; 
-                                unset($_SESSION['error']);
-                                $result->free();
-                        }
-
-                $club = $_SESSION['club'];
-                $sql = "SELECT * FROM `zawodnicy` WHERE Klub = '$club' ORDER BY NumerCzepka";
-    
-                        if($result = @$connection->query($sql))
-                        {
-                                while($row = $result->fetch_assoc() )
-                                {
-                                    $name = $row['Imie'];
-                                    $surname = $row['Nazwisko'];
-                                    $position = $row['Pozycja'];
-                                    $number = $row['NumerCzepka'];
-                                    $age = $row['Rocznik'];
-                                    $email = $row['Email'];
-                                    $goals = $row['ZdobyteBramki'];
-
-                                    echo "<tr><td class = \"layout\">{$name}</td><td class = \"layout\">{$surname}</td><td class = \"layout\">{$position}</td><td class = \"layout\">{$number}</td><td class = \"layout\">{$goals}</td><td class = \"layout\"><a href = \"mailto:{$email}\">{$email}</a></td></tr>";
-                                }
-                                $result->free();
-                                echo  "</table></center>";
-
-                                if(isset($_SESSION['status']) && $_SESSION['status']==2)
-                                {
-                                    echo "
-                                    <a class=\"button\" href='addPlayerForm.php' target=\"_blank\">
-                                    
-                                        Dodaj zawodnika
-                                    
-                                    </a>";
-                                }
-                        }else
-                            echo "błędne zapytanie";
-                }
+                    $club = $_SESSION['club'];
+                    $sql = "SELECT *  FROM `wydarzenia` WHERE Klub = '$club' ORDER BY DataWyd";
+        
+                            if($result = @$connection->query($sql))
+                            {
+                                    while($row = $result->fetch_assoc() )
+                                    {
+                                        $id[$j] = $row['ID'];
+                                        $name = $row['Nazwa'];
+                                        $date = $row['DataWyd'];
+                                        $inf = $row['Info'];
+                                        echo "<tr><td class = \"layout\">{$date}</td><td class = \"layout\">{$name}</td><td class = \"inf\">{$inf}</td><td class = \"layout\">";if(isset($_SESSION['status']) && $_SESSION['status']==2)echo"<form action=\"myEventsDelete.php\" method=\"post\" enctype=\"multipart/form-data\"><input type=\"hidden\" id=\"id\" name=\"id\" value = $id[$j]> <input class=\"button\" type=\"submit\" value=\"Usuń\"></form></td></tr>";
+                                        $j++;
+                                    }
+                                    $result->free();
+                                    echo  "</table></center>";
+                                // print_r($_SESSION);
+                                    if(isset($_SESSION['status']) && $_SESSION['status']==2)
+                                    {
+                                        echo "
+                                        <a class=\"button\" href='myEventsForm.php' target=\"_blank\">
+                                        
+                                            Dodaj wydarzenie
+                                        
+                                        </a>";
+                                    }
+                            }else
+                                echo "błędne zapytanie";
+                    }
                 $connection->close();
             }
         
@@ -84,7 +70,32 @@
     border-left: none;
     border-top: none;
     border-right: none;
-    height:40px;
+}
+
+.inf
+{
+    text-align: justify;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 15px;
+    border: 1px solid black;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    width: 400px;
+}
+
+.headInf
+{
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 15px;
+    border: 1px solid black;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    font-weight: bold;
+    height:60px;
+    width: 400px;
 }
 
 .head

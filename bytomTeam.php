@@ -14,7 +14,7 @@
             else
             {
                 $club = $_SESSION['club'];
-                $sql = "SELECT * FROM `zawodnicy` WHERE Klub = 'WTS Polonia Bytom' ORDER BY NumerCzepka";
+                $sql = "SELECT * FROM `zawodnicy` WHERE Klub = 'Łukosz WTS Polonia Bytom' ORDER BY NumerCzepka";
     
                         if($result = @$connection->query($sql))
                         {

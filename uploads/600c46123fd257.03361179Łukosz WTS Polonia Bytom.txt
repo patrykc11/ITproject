@@ -1,0 +1,4 @@
+My name is Patryk Cebo. I don't have a proposed nickname. I am not sure yet, but me and Mateusz Grzegorczyk would like to make some changes
+in our project from SM (Microprocessor Systems) which is a control system for an automated garage. Our idea is to expand this project by adding web or mobile app which 
+would communicate by internet. Our expanded project would activate alert system if movement is detected. It could have live stream from cameras. It is our
+proposition for this moment, but we haven't finished yet a primary version of project. If we come up with better idea, we will sure let you know as soon as possible.
